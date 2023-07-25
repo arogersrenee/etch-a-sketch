@@ -45,6 +45,10 @@ a {
 
 .box {
     border: solid 1px #585656;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 500px;
+    height: 500px;
 
 }
 

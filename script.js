@@ -4,25 +4,24 @@ const container = document.getElementById('container');
 const squares = document.getElementsByClassName('squares')
 const numOfSquaresBtn = document.getElementById('input')
 
-
+//initial grid on load
 let grid = 32
-createGrid()
+createGrid(grid)
 draw()
 
 numOfSquaresBtn.addEventListener('click', getNumberofSquares)
 
 function getNumberofSquares (){
-    let grid = prompt("How many squares per side would you like? Max = 100");
+    grid = prompt("How many squares per side would you like? Max = 100");
     if(grid <= 100){    
     removeGrid();
     createGrid(grid);
     draw();
     } else {
         alert("Grid must be less than 100 per side");
+        getNumberofSquares();
     }
 }
-
-
 
 function createGrid(grid){
     grid **=2
@@ -30,8 +29,7 @@ function createGrid(grid){
         const square = document.createElement('div');
         square.className = "squares";
         container.appendChild(square);
-        square.style.width = (500 / Math.sqrt(grid)) + "px";
-        // square.style.height = (500 / Math.sqrt(grid)) + "px";
+        square.style.width = (500 / Math.sqrt(grid)) + "px"; // 500 = container width... must match
     }
 }
 
@@ -49,6 +47,6 @@ function removeGrid(){
 function draw() {
     for(i = 0; i < squares.length; i++){
     squares[i].addEventListener('mouseover', function (){
-        this.style.backgroundColor = "red" // why did "this" work?
+        this.style.backgroundColor = "#000" // why did "this" work?
     } )
 }}
