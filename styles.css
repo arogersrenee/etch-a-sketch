@@ -32,7 +32,6 @@ a {
 
 .squares {
     background-color: #fff;
-    border: solid 1px #c1bebe;
     
 
 }
@@ -42,5 +41,10 @@ a {
     flex-wrap: wrap;
     width: 500px;
     height: 500px;
+}
+
+.box {
+    border: solid 1px #585656;
+
 }
 

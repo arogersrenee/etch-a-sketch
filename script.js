@@ -3,7 +3,7 @@
 const container = document.getElementById('container');
 const squares = document.getElementsByClassName('squares')
 
-let grid = 16
+let grid = 32
 
 function createGrid(grid){
     grid **=2
@@ -17,3 +17,10 @@ function createGrid(grid){
 }
 
 createGrid(grid)
+
+// * add “hover” effect so that the grid divs change color when your mouse passes over them, leaving a (pixelated) trail through your grid like a pen would. */
+for(i = 0; i < squares.length; i++){
+    squares[i].addEventListener('mouseover', function (){
+        this.style.backgroundColor = "red" // why did "this" work?
+    } )
+}
