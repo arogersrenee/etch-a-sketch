@@ -44,11 +44,42 @@ a {
 }
 
 .box {
-    border: solid 1px #585656;
-    border-radius: 10px;
-    overflow: hidden;
+    /* border: solid 1px #585656; */
+    background-color: #fff;
     width: 500px;
     height: 500px;
-
+    box-shadow: 0px 0px 15px 5px #d8d7d7;
 }
 
+body {
+    padding: 3rem;
+    font-family: sans-serif;
+    background-color: rgb(234, 234, 234);
+}
+
+main {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+button {
+    align-self: center;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 0.25rem;
+    color: #fff;
+    background-color: #000;
+}
+
+button:hover {
+    background-color: #797979;
+}

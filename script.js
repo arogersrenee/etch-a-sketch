@@ -35,11 +35,10 @@ function createGrid(grid){
 
 // function remove the grid child elements
 function removeGrid(){
-    let gridContainer = document.getElementById('container');
-    last = gridContainer.lastElementChild;
+    last = container.lastElementChild;
     while(last) {
         last.remove();
-        last = gridContainer.lastElementChild
+        last = container.lastElementChild
     }
 }
 
