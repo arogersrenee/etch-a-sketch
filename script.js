@@ -3,6 +3,7 @@
 const container = document.getElementById('container');
 const squares = document.getElementsByClassName('squares')
 const numOfSquaresBtn = document.getElementById('input')
+const resetBtn = document.getElementById('reset')
 
 //initial grid on load
 let grid = 32
@@ -11,7 +12,9 @@ draw()
 
 numOfSquaresBtn.addEventListener('click', getNumberofSquares)
 
-function getNumberofSquares (){
+resetBtn.addEventListener('click', clearCanvas)
+
+function getNumberofSquares() {
     grid = prompt("How many squares per side would you like? Max = 100");
     if(grid <= 100){    
     removeGrid();
@@ -49,3 +52,12 @@ function draw() {
         this.style.backgroundColor = "#000" // why did "this" work?
     } )
 }}
+
+function clearCanvas() {
+    for(i = 0; i < squares.length; i++){
+    squares[i].style.backgroundColor = "#fff" 
+    }
+}
+
+//reset button
+
